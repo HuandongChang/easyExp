@@ -17,12 +17,12 @@ main_plot(dataset, response, x1, x2, x3, ylim)
 
 \item{x3}{the third factor (optional)}
 
-\item{ylim}{a vector of the range of y-axis}
+\item{ylim}{a vector of the range of the y-axis}
 }
 \value{
 main effect plots
 }
 \description{
 This function gives the main effect plots for one or more treatments in an experiment.
-If more than 1 treaments are given and ylim is not specified, plots will share the same y-axis range.
+If more than 1 treatment is given and ylim is not specified, plots will share the same y-axis range.
 }

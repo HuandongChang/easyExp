@@ -1,13 +1,13 @@
 #' Main Effect Plots
 #'
 #' This function gives the main effect plots for one or more treatments in an experiment.
-#' If more than 1 treaments are given and ylim is not specified, plots will share the same y-axis range.
+#' If more than 1 treatment is given and ylim is not specified, plots will share the same y-axis range.
 #' @param dataset the dataset that contains the experiment information
 #' @param response the value of interest
 #' @param x1 the first factor
 #' @param x2 the second factor (optional)
 #' @param x3 the third factor (optional)
-#' @param ylim a vector of the range of y-axis
+#' @param ylim a vector of the range of the y-axis
 #' @return main effect plots
 #' @importFrom ggplot2 ggplot aes geom_line theme geom_point coord_cartesian element_text
 #' @importFrom dplyr group_by summarise %>%
