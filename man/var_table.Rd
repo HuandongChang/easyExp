@@ -4,7 +4,7 @@
 \alias{var_table}
 \title{An interactive table to show variances of different groups}
 \usage{
-var_table(dataset, response, x1, x2 = NULL, x3 = NULL, type = 1)
+var_table(dataset, response, x1, x2 = NULL, x3 = NULL)
 }
 \arguments{
 \item{dataset}{the dataset that contains the experiment information}
@@ -22,7 +22,5 @@ an interactive variance table
 }
 \description{
 This function gives an interactive table to show variances of different groups.
-It can help check the within groups equal variances assumptions.
-This function has two types of table, the default is type 1, and use parameter "type=2" to switch to the second.
-In both types of tables, you can click column names to sort.
+It can help check the within groups equal variances assumptions. You can click column names to sort.
 }

@@ -47,9 +47,7 @@ var_scatterplot = function(dataset, response, x1, x2=NULL){
 #' An interactive table to show variances of different groups
 #'
 #' This function gives an interactive table to show variances of different groups.
-#' It can help check the within groups equal variances assumptions.
-#' This function has two types of table, the default is type 1, and use parameter "type=2" to switch to the second.
-#' In both types of tables, you can click column names to sort.
+#' It can help check the within groups equal variances assumptions. You can click column names to sort.
 #' @param dataset the dataset that contains the experiment information
 #' @param response the value of interest
 #' @param x1 the first factor
@@ -59,10 +57,8 @@ var_scatterplot = function(dataset, response, x1, x2=NULL){
 #' @importFrom dplyr group_by summarise %>% mutate_if n
 #' @importFrom reactable reactable colDef
 #' @importFrom reactablefmtr data_bars
-#' @importFrom formattable formattable color_bar as.datatable
-#' @import DT
 #' @export
-var_table = function(dataset, response, x1, x2=NULL, x3=NULL, type=1){
+var_table = function(dataset, response, x1, x2=NULL, x3=NULL){
   summary_table = group_by(dataset, {{x1}},{{x2}},{{x3}}) %>%
     summarise(GroupVariance=var({{response}}),
               SampleSize=n(), .groups = 'drop')
@@ -70,15 +66,14 @@ var_table = function(dataset, response, x1, x2=NULL, x3=NULL, type=1){
   summary_df = summary_df %>%
     mutate_if(is.numeric, round, digits = 2)
 
-  if (type == 1){
+
     reactable(summary_df,defaultColDef = colDef(cell = data_bars(summary_df, box_shadow = TRUE, round_edges = TRUE,
                                                                  text_position = "outside-base",
                                                                  fill_color = c("#e81cff", "#40c9ff"),
                                                                  background = "#e5e5e5",fill_gradient = TRUE)))
-  }
-  else{
-    as.datatable(formattable(summary_df, list(SampleSize = color_bar("#80ed99"),GroupVariance = color_bar("#f28482"))))
-  }
+
+    #as.datatable(formattable(summary_df, list(SampleSize = color_bar("#80ed99"),GroupVariance = color_bar("#f28482"))))
+
 }
 
 
