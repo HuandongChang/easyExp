@@ -1,2 +1,0 @@
-"0","Popcorn=read.csv(""~/R/2023Spring_MAP/dataset/C4 Popcorn.csv"")"
-"0","Popcorn$Time<-as.factor(Popcorn$Time)"
