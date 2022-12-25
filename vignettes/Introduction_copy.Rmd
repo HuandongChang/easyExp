@@ -7,7 +7,6 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-library(easyExp)
 ```
 
 ## Introduction
@@ -16,6 +15,10 @@ In most of the functions, the function paramaters follow the pattern of dataset,
 
 
 ## An example using dataset Towels2
+
+```{r}
+library(easyExp)
+```
 
 #### A box plot to check the equal variances assumption in ANOVA
 
