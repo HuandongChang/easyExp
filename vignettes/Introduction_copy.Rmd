@@ -12,7 +12,8 @@ library(easyExp)
 
 ## Introduction
 
-In most of the functions, the function paramaters follow the pattern of dataset, response variable, factor 1, factor 2, factor 3. The function details can be check typing *?[function_name]* in the R Console. If you have less than the paramaters listed here, in most cases you can simply ignore the extra ones and the function has the mechanisms to deal with these issues.
+In most of the functions, the function paramaters follow the pattern of dataset, response variable, factor 1, factor 2, factor 3. The function details can be check typing *?[function_name]* in the R Console. If you have less than the paramaters listed here, in most cases you can simply ignore the extra ones and the function has the mechanisms to deal with these issues.  
+
 
 ## An example using dataset Towels2
 
@@ -34,7 +35,8 @@ var_scatterplot(Towels2, LogStrength, Brand, Water)
 var_table(Towels2, LogStrength, Brand, Water)
 ```
 
-You can sort the GroupVariance or other columns by clicking the column name.
+You can sort the GroupVariance or other columns by clicking the column name.  
+
 
 #### A qqplot and a histogram for residuals
 
@@ -64,7 +66,9 @@ summary(aov1)
 main_plot(Towels2, LogStrength, Brand, Water)
 ```
 
-If you are only interested in one treatment (or you have a 3-way ANOVA), you can simply add (or reduce) parameters in the function inputs.
+
+If you are only interested in one treatment (or you have a 3-way ANOVA), you can simply add (or reduce) parameters in the function inputs.  
+
 
 #### Interaction Effect Plot
 
