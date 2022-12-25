@@ -63,4 +63,8 @@ Towels2
 
 
 # Example
+Here are some highlights:
 
+
+You can find a complete example
+[here](http://htmlpreview.github.io/?https://github.com/HuandongChang/easyExp/blob/main/vignettes/introduction.html).
