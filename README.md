@@ -6,8 +6,9 @@ When you analyze and visualize your experiments, are you always bored with creat
 # install.packages("devtools")
 devtools::install_github("HuandongChang/easyExp")
 ```
+
 # Motivation
-When reviewing the packages in R we find that the experimental design packages have the fewest average number of contributors compared to other statistical fields that R provides. They also do not typically provide meaningful graphics options that address all types of variabilities. Without easily accessible graphics, it becomes challenging to validate the experiment assumptions and statistically analyze the experiment results efficiently, comprehensively, and rigorously. easyExp provides simple but powerful commands for users so that beginners like students can easily gain hands-on experiences and can focus more on experimental designs rather than commands. 
+When reviewing the packages in R we find that currently there are few user-friendly packages whose interface designs match the way researchers and students cognitively design experiments (Tanaka & Amaliah, 2022). They also do not typically provide meaningful graphics options that address all types of variabilities. Without easily accessible graphics, it becomes challenging to validate the experiment assumptions and statistically analyze the experiment results efficiently, comprehensively, and rigorously. easyExp provides simple but powerful commands for users so that beginners like students can easily gain hands-on experiences and can focus more on experimental designs rather than commands. 
 
 
 # Functions
@@ -75,5 +76,7 @@ You can find a complete example
 
 ![](figure/interactionEffect.png)
 
+# References
+Tanaka, Emi, and Dewi Amaliah. "Current state and prospects of R-packages for the design of experiments." arXiv preprint arXiv:2206.07532 (2022).
 
 
