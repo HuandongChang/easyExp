@@ -6,6 +6,9 @@ When you analyze and visualize your experiments, are you always bored with creat
 # install.packages("devtools")
 devtools::install_github("HuandongChang/easyExp")
 ```
+# Motivation
+When reviewing the packages in R we find that the experimental design packages have the fewest average number of contributors compared to other statistical fields that R provides. They also do not typically provide meaningful graphics options that address all types of variabilities. Without easily accessible graphics, it becomes challenging to validate the experiment assumptions and statistically analyze the experiment results efficiently, comprehensively, and rigorously. easyExp provides simple but powerful commands for users so that beginners like students can easily gain hands-on experiences and can focus more on experimental designs rather than commands. 
+
 
 # Functions
 **Checking ANOVA Assumptions**
@@ -63,8 +66,14 @@ Towels2
 
 
 # Example
-Here are some highlights:
-
-
 You can find a complete example
-[here](http://htmlpreview.github.io/?https://github.com/HuandongChang/easyExp/blob/main/vignettes/introduction.html).
+[here](http://htmlpreview.github.io/?https://github.com/HuandongChang/easyExp/blob/main/vignettes/introduction.html). Some highlights:
+
+![](figure/vartable.png)
+
+![](figure/residual.png)
+
+![](figure/interactionEffect.png)
+
+
+
