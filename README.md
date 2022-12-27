@@ -1,5 +1,5 @@
 # easyExp
-When you analyze and visualize your experiments, are you always bored with creating nice, concise, and easy-to-understand visualizations? From assumption checking to effects visualizations, everything can be done in one line with easyExp, whether one-way, two-way, or three-way ANOVA!
+When you analyze and visualize your experiments, are you always bored with creating nice, concise, and easy-to-understand visualizations? From assumption checking to effects visualizations, everything can be done in one line with easyExp, whether it's three-way ANOVA, block design, or split-plot design!
 
 # Installation
 ```
