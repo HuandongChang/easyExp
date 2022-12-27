@@ -139,14 +139,30 @@ normal_err = function(dataset_residual, response, x1, x2=NULL, interaction = TRU
 #' @importFrom gridExtra grid.arrange
 #' @export
 iid = function(dataset, anova_model){
-  residual_fitted = ggplot(anova_model, aes(x = .fitted, y = .resid)) +
-    geom_point() +
-    geom_hline(yintercept = 0)+xlab("fitted value")+ylab("residual")
+  if(!is.null(anova_model$residuals)){
+    residual_fitted = ggplot(anova_model, aes(x = .fitted, y = .resid)) +
+      geom_point() +
+      geom_hline(yintercept = 0)+xlab("fitted value")+ylab("residual")
 
-  dataset$rownum = 1:dim(dataset)[1]
-  residual_order = ggplot(anova_model, aes(x=dataset$rownum, y = .resid)) +
-    geom_point() +
-    geom_hline(yintercept = 0)+xlab("row number")+ylab("residual")
+    dataset$rownum = 1:dim(dataset)[1]
+    residual_order = ggplot(anova_model, aes(x=dataset$rownum, y = .resid)) +
+      geom_point() +
+      geom_hline(yintercept = 0)+xlab("row number")+ylab("residual")
+  }
+  else{
+    fits  = anova_model$Within$fitted.values
+    resids  = anova_model$Within$residuals
+    aov_data = data.frame(fits,resids)
+
+    residual_fitted = ggplot(aov_data,aes(x = fits, y = resids)) +
+      geom_point() +
+      geom_hline(yintercept = 0)+xlab("fitted value")+ylab("residual")
+
+    aov_data$rownum = 1:dim(aov_data)[1]
+    residual_order = ggplot(aov_data, aes(x=rownum, y = resids)) +
+      geom_point() +
+      geom_hline(yintercept = 0)+xlab("row number")+ylab("residual")
+  }
 
 
   grid.arrange(residual_fitted, residual_order, ncol=1)
