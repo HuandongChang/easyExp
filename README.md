@@ -55,6 +55,7 @@ interaction_plot = function(dataset, response, x1, x2)
 
 # Datasets Available in the Package
 ```
+# one-way/two-way/three-way anova
 Bacteria
 Cholesterol
 Cups
@@ -63,6 +64,20 @@ Movies
 Popcorn
 Soda
 Towels2
+
+# block deisgn/split-plot design
+C5Popcorn
+Colors
+Colors2
+Cookies
+Cookies2
+Corn
+Flower
+Football
+Handwash
+Memory
+Music
+Tennis
 ```
 
 
