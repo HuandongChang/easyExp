@@ -60,6 +60,7 @@ aov1 = aov(LogStrength~Brand*Water, Towels2)
 iid(Towels2, aov1)
 ```
 
+
 #### ANOVA Table
 
 ```{r}
